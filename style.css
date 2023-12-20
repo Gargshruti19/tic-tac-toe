@@ -66,6 +66,7 @@ main h1 {
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
 		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 	font-size: 5vmin;
+	margin-bottom: 10px;
 }
 .container {
 	height: 70vh;
@@ -73,6 +74,7 @@ main h1 {
 
 	justify-content: center;
 	align-items: center;
+	gap: 10vmin;
 }
 .game {
 	height: 60vmin;
@@ -109,4 +111,45 @@ main h1 {
 	color: #fff;
 	border-radius: 1rem;
 	border: none;
+}
+
+.showScore {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5vmin;
+	/* border: 1px solid black; */
+	height: 30vmin;
+	width: 45vmin;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 30px;
+}
+.scoreO,
+.scoreX {
+	display: flex;
+	flex-direction: column;
+	gap: 3vmin;
+}
+.scoreO label,
+.scoreX label {
+	font-size: 3vmin;
+	font-family: sans-serif;
+	color: #efeff5;
+}
+.scoreO button,
+.scoreX button {
+	/* background: transparent; */
+	border: 0;
+	outline: 0;
+	width: 10vmin;
+	height: 5vmin;
+	background-color: #c0d1d457;
+	border-radius: 5px;
+	color: #fff;
+	/* padding: 4px; */
+	font-size: 2.8vmin;
+	cursor: text;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

@@ -5,6 +5,10 @@ const newGameBtn = document.querySelector("#new-btn");
 const msgContainer = document.querySelector(".msg-container");
 const msg = document.querySelector(".msg");
 const overlay = document.querySelector(".overlay");
+
+let playerOScore = 0;
+let playerXScore = 0;
+
 let turnO = true;
 let count = 0;
 const winPatterns = [
@@ -66,9 +70,27 @@ const enableBoxes = () => {
 		box.innerHTML = "";
 	}
 };
+
 const showWinner = function (winner) {
 	msg.innerHTML = `Congratulations, Winner is ${winner}`;
 	msgContainer.classList.remove("hide");
+	// if (winner === "X") {
+	// 	let scoreofX = 0;
+	// 	if (scoreX.innerHTML === scoreofX) {
+	// 		scoreX.innerHTML++;
+	// 	}
+	// } else {
+	// 	let scoreofO = 0;
+	// 	if (scoreO.innerHTML === scoreofO) {
+	// 		scoreofO++;
+	// 	}
+	// }
+	if (winner === "X") {
+		updatePlayerXScore();
+	} else {
+		updatePlayerOScore();
+	}
+
 	disableBoxes();
 	showModal();
 };
@@ -102,3 +124,17 @@ const closeModal = function () {
 };
 overlay.addEventListener("click", closeModal);
 newGameBtn.addEventListener("click", closeModal);
+
+const displayScores = function () {
+	document.querySelector("#playerO").textContent = playerOScore;
+	document.querySelector("#playerX").textContent = playerXScore;
+};
+function updatePlayerOScore() {
+	playerOScore++;
+	displayScores();
+}
+
+function updatePlayerXScore() {
+	playerXScore++;
+	displayScores();
+}
