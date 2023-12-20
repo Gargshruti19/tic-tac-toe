@@ -7,11 +7,13 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<div class="msg-container hide">
-			<p class="msg">Winner</p>
-			<button id="new-btn">New Game</button>
+		<div class="msg-box">
+			<div class="msg-container hide">
+				<p class="msg">Winner</p>
+				<button id="new-btn">New Game</button>
+			</div>
 		</div>
-		<main>
+		<main class="main">
 			<h1>Tic Tac Toe</h1>
 			<div class="container">
 				<div class="game">
@@ -28,7 +30,7 @@
 			</div>
 			<button id="reset-btn">Reset Game</button>
 		</main>
-
+		<div class="overlay hide"></div>
 		<script src="script.js"></script>
 	</body>
 </html>
