@@ -5,7 +5,10 @@ const newGameBtn = document.querySelector("#new-btn");
 const msgContainer = document.querySelector(".msg-container");
 const msg = document.querySelector(".msg");
 const overlay = document.querySelector(".overlay");
-
+const front = document.querySelector(".front-page");
+setTimeout(() => {
+	front.style.display = "none";
+}, 6000);
 let playerOScore = 0;
 let playerXScore = 0;
 
@@ -53,6 +56,7 @@ boxes.forEach((box) =>
 		}
 	})
 );
+
 const gameDraw = () => {
 	msg.innerText = `Game was a Draw.`;
 	msgContainer.classList.remove("hide");
@@ -131,10 +135,17 @@ const displayScores = function () {
 };
 function updatePlayerOScore() {
 	playerOScore++;
+	if (playerOScore < 10) {
+		playerOScore = "0" + playerOScore;
+	}
 	displayScores();
 }
 
 function updatePlayerXScore() {
 	playerXScore++;
+	if (playerXScore < 10) {
+		playerXScore = "0" + playerXScore;
+	}
+
 	displayScores();
 }

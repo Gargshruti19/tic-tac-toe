@@ -6,6 +6,55 @@ body {
 	text-align: center;
 	overflow: hidden;
 }
+main .front-page {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: black;
+	gap: 2rem;
+}
+
+main .front-page h1 {
+	color: #fff;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-size: 7vmin;
+	margin-bottom: 30px;
+	position: relative;
+	animation: slide 8s infinite;
+}
+h2 {
+	color: #fff;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: 4vmin;
+	margin-bottom: 10px;
+	position: relative;
+	animation: slide-horizontal 10s infinite;
+}
+
+@keyframes slide {
+	0% {
+		transform: scale(0.4);
+
+		filter: blur(30px);
+	}
+
+	50% {
+		filter: blur(0);
+		transform: scale(2);
+	}
+}
+@keyframes slide-horizontal {
+	0% {
+		transform: translateX(-100vw);
+	}
+	100% {
+		transform: translateX(100vw);
+	}
+}
 .msg {
 	color: #000;
 	font-size: 4vmin;
@@ -18,8 +67,8 @@ body {
 	margin-top: 40vmin;
 }
 .msg-container {
-	height: 20vmin;
-	width: 20vmin;
+	height: 15vmin;
+	width: 24vmin;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -33,7 +82,7 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	background-color: rgba(255, 255, 255, 0.884);
-	padding: 6rem;
+	padding: 3rem;
 	border-radius: 20px;
 	box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.5);
 }
@@ -61,20 +110,15 @@ main {
 	left: 0;
 	border: 1px solid black;
 }
-main h1 {
-	color: black;
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	font-size: 5vmin;
-	margin-bottom: 10px;
-}
+
 .container {
 	height: 70vh;
 	display: flex;
 
 	justify-content: center;
 	align-items: center;
-	gap: 10vmin;
+	gap: 20vmin;
+	margin-top: 10vh;
 }
 .game {
 	height: 60vmin;
@@ -96,6 +140,9 @@ main h1 {
 	color: #b0413e;
 	background-color: #ffffc7;
 }
+.box:focus {
+	transform: scale(0.9);
+}
 #reset-btn {
 	padding: 1rem;
 	font-size: 1.25rem;
@@ -104,12 +151,13 @@ main h1 {
 	border-radius: 1rem;
 	border: none;
 }
+
 #new-btn {
-	padding: 1rem;
-	font-size: 1.25rem;
+	padding: 0.6rem;
+	font-size: 1rem;
 	background-color: #191913;
 	color: #fff;
-	border-radius: 1rem;
+	border-radius: 0.7rem;
 	border: none;
 }
 
