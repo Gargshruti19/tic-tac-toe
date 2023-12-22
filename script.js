@@ -8,7 +8,7 @@ const overlay = document.querySelector(".overlay");
 const front = document.querySelector(".front-page");
 setTimeout(() => {
 	front.style.display = "none";
-}, 6000);
+}, 9000);
 let playerOScore = 0;
 let playerXScore = 0;
 
