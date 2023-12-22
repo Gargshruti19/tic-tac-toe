@@ -24,17 +24,8 @@ main .front-page h1 {
 	font-size: 7vmin;
 	margin-bottom: 30px;
 	position: relative;
-	animation: slide 8s infinite;
+	animation: slide 12s infinite;
 }
-h2 {
-	color: #fff;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 4vmin;
-	margin-bottom: 10px;
-	position: relative;
-	animation: slide-horizontal 10s infinite;
-}
-
 @keyframes slide {
 	0% {
 		transform: scale(0.4);
@@ -46,15 +37,98 @@ h2 {
 		filter: blur(0);
 		transform: scale(2);
 	}
+	100% {
+		filter: blur(2px);
+		transform: scale(1.2);
+	}
+}
+#h21,
+#h22,
+#h23,
+#h24,
+#h25,
+#h26,
+#h27,
+#h28,
+#h29 {
+	color: #fff;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+	margin-bottom: 10px;
+	position: relative;
+}
+
+#h21 {
+	animation: slide-horizontal 12s infinite;
+	font-size: 3vmin;
+	position: absolute;
+	top: 30px;
+}
+#h22 {
+	animation: slide-vertical 12s infinite;
+	font-size: 2vmin;
+	position: absolute;
+	left: 30px;
+}
+#h23 {
+	animation: slide-vertical-reverse 12s infinite;
+	font-size: 2vmin;
+	position: absolute;
+	right: 30px;
+}
+
+#h24 {
+	animation: slide-horizontal-reverse 12s infinite;
+	font-size: 3vmin;
+
+	position: absolute;
+	bottom: 30px;
 }
 @keyframes slide-horizontal {
 	0% {
 		transform: translateX(-100vw);
 	}
+	50% {
+		transform: scale(1.5);
+	}
 	100% {
 		transform: translateX(100vw);
 	}
 }
+@keyframes slide-vertical {
+	0% {
+		transform: translateY(-100vw);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: translateY(100vw);
+	}
+}
+@keyframes slide-horizontal-reverse {
+	0% {
+		transform: translateX(100vw);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: translateX(-100vw);
+	}
+}
+@keyframes slide-vertical-reverse {
+	0% {
+		transform: translateY(100vw);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: translateY(-100vw);
+	}
+}
+
 .msg {
 	color: #000;
 	font-size: 4vmin;
