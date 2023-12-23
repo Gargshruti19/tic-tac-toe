@@ -24,7 +24,7 @@ main .front-page h1 {
 	font-size: 7vmin;
 	margin-bottom: 30px;
 	position: relative;
-	animation: slide 12s infinite;
+	animation: slide 9s infinite;
 }
 @keyframes slide {
 	0% {
@@ -38,7 +38,7 @@ main .front-page h1 {
 		transform: scale(2);
 	}
 	100% {
-		filter: blur(2px);
+		filter: blur(5px);
 		transform: scale(1.2);
 	}
 }
@@ -65,20 +65,20 @@ main .front-page h1 {
 	top: 30px;
 }
 #h22 {
-	animation: slide-vertical 12s infinite;
+	animation: slide-vertical 11s infinite;
 	font-size: 2vmin;
 	position: absolute;
 	left: 30px;
 }
 #h23 {
-	animation: slide-vertical-reverse 12s infinite;
+	animation: slide-vertical-reverse 10s infinite;
 	font-size: 2vmin;
 	position: absolute;
 	right: 30px;
 }
 
 #h24 {
-	animation: slide-horizontal-reverse 12s infinite;
+	animation: slide-horizontal-reverse 13s infinite;
 	font-size: 3vmin;
 
 	position: absolute;
@@ -88,9 +88,7 @@ main .front-page h1 {
 	0% {
 		transform: translateX(-100vw);
 	}
-	50% {
-		transform: scale(1.5);
-	}
+
 	100% {
 		transform: translateX(100vw);
 	}
@@ -99,9 +97,7 @@ main .front-page h1 {
 	0% {
 		transform: translateY(-100vw);
 	}
-	50% {
-		transform: scale(1.5);
-	}
+
 	100% {
 		transform: translateY(100vw);
 	}
@@ -110,9 +106,7 @@ main .front-page h1 {
 	0% {
 		transform: translateX(100vw);
 	}
-	50% {
-		transform: scale(1.5);
-	}
+
 	100% {
 		transform: translateX(-100vw);
 	}
@@ -121,9 +115,7 @@ main .front-page h1 {
 	0% {
 		transform: translateY(100vw);
 	}
-	50% {
-		transform: scale(1.5);
-	}
+
 	100% {
 		transform: translateY(-100vw);
 	}
@@ -203,7 +195,22 @@ main {
 	align-items: center;
 	gap: 1.5vmin;
 }
-
+@keyframes fadeIn {
+	70%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 0.2;
+	}
+	90% {
+		opacity: 0.4;
+		transform: scale(0.8);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
 .box {
 	height: 18vmin;
 	width: 18vmin;
@@ -213,6 +220,34 @@ main {
 	font-size: 8vmin;
 	color: #b0413e;
 	background-color: #ffffc7;
+	/* animation: fadeIn 10s ease-in-out; */
+}
+.box:nth-child(1) {
+	animation: fadeIn 11s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.box:nth-child(2) {
+	animation: fadeIn 9s ease-out;
+}
+.box:nth-child(3) {
+	animation: fadeIn 11s cubic-bezier(0.55, 0.085, 0.68, 0.53);
+}
+.box:nth-child(4) {
+	animation: fadeIn 9s ease-in;
+}
+.box:nth-child(5) {
+	animation: fadeIn 11s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.box:nth-child(6) {
+	animation: fadeIn 9s alternate-reverse;
+}
+.box:nth-child(7) {
+	animation: fadeIn 11s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+}
+.box:nth-child(8) {
+	animation: fadeIn 9s reverse;
+}
+.box:nth-child(9) {
+	animation: fadeIn 11s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
 .box:focus {
 	transform: scale(0.9);

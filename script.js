@@ -6,9 +6,11 @@ const msgContainer = document.querySelector(".msg-container");
 const msg = document.querySelector(".msg");
 const overlay = document.querySelector(".overlay");
 const front = document.querySelector(".front-page");
+
 setTimeout(() => {
 	front.style.display = "none";
-}, 9000);
+}, 8000);
+
 let playerOScore = 0;
 let playerXScore = 0;
 
