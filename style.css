@@ -24,7 +24,7 @@ main .front-page h1 {
 	font-size: 7vmin;
 	margin-bottom: 30px;
 	position: relative;
-	animation: slide 9s infinite;
+	animation: slide 8s infinite;
 }
 @keyframes slide {
 	0% {
@@ -33,12 +33,12 @@ main .front-page h1 {
 		filter: blur(30px);
 	}
 
-	50% {
+	70% {
 		filter: blur(0);
 		transform: scale(2);
 	}
 	100% {
-		filter: blur(5px);
+		filter: blur(10px);
 		transform: scale(1.2);
 	}
 }
@@ -60,26 +60,26 @@ main .front-page h1 {
 
 #h21 {
 	animation: slide-horizontal 12s infinite;
-	font-size: 3vmin;
+	font-size: 4vmin;
 	position: absolute;
 	top: 30px;
 }
 #h22 {
 	animation: slide-vertical 11s infinite;
-	font-size: 2vmin;
+	font-size: 3vmin;
 	position: absolute;
 	left: 30px;
 }
 #h23 {
-	animation: slide-vertical-reverse 10s infinite;
-	font-size: 2vmin;
+	animation: slide-vertical-reverse 11s infinite;
+	font-size: 3vmin;
 	position: absolute;
 	right: 30px;
 }
 
 #h24 {
 	animation: slide-horizontal-reverse 13s infinite;
-	font-size: 3vmin;
+	font-size: 4vmin;
 
 	position: absolute;
 	bottom: 30px;
@@ -95,11 +95,11 @@ main .front-page h1 {
 }
 @keyframes slide-vertical {
 	0% {
-		transform: translateY(-100vw);
+		transform: translateY(-100vh);
 	}
 
 	100% {
-		transform: translateY(100vw);
+		transform: translateY(100vh);
 	}
 }
 @keyframes slide-horizontal-reverse {
@@ -113,11 +113,11 @@ main .front-page h1 {
 }
 @keyframes slide-vertical-reverse {
 	0% {
-		transform: translateY(100vw);
+		transform: translateY(100vh);
 	}
 
 	100% {
-		transform: translateY(-100vw);
+		transform: translateY(-100vh);
 	}
 }
 
@@ -194,17 +194,31 @@ main {
 	justify-content: center;
 	align-items: center;
 	gap: 1.5vmin;
+	animation: slide-left 11s ease-in;
+}
+@keyframes slide-left {
+	70% {
+		transform: translateX(-150px);
+	}
+	85% {
+		opacity: 0.7;
+	}
+	100% {
+		transform: translateX(0px);
+	}
 }
 @keyframes fadeIn {
-	70%{
+	70% {
 		opacity: 0;
+		transform: scale(0.8);
 	}
-	80%{
+	80% {
 		opacity: 0.2;
+		transform: scale(1.1);
 	}
 	90% {
 		opacity: 0.4;
-		transform: scale(0.8);
+		transform: scale(0.6);
 	}
 	100% {
 		opacity: 1;
@@ -222,33 +236,20 @@ main {
 	background-color: #ffffc7;
 	/* animation: fadeIn 10s ease-in-out; */
 }
-.box:nth-child(1) {
+.box:nth-child(1),
+.box:nth-child(3),
+.box:nth-child(5),
+.box:nth-child(7),
+.box:nth-child(9) {
 	animation: fadeIn 11s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.box:nth-child(2) {
-	animation: fadeIn 9s ease-out;
-}
-.box:nth-child(3) {
-	animation: fadeIn 11s cubic-bezier(0.55, 0.085, 0.68, 0.53);
-}
-.box:nth-child(4) {
-	animation: fadeIn 9s ease-in;
-}
-.box:nth-child(5) {
-	animation: fadeIn 11s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-.box:nth-child(6) {
-	animation: fadeIn 9s alternate-reverse;
-}
-.box:nth-child(7) {
-	animation: fadeIn 11s cubic-bezier(0.895, 0.03, 0.685, 0.22);
-}
+.box:nth-child(2),
+.box:nth-child(4),
+.box:nth-child(6),
 .box:nth-child(8) {
-	animation: fadeIn 9s reverse;
+	animation: fadeIn 9s ease-in-out;
 }
-.box:nth-child(9) {
-	animation: fadeIn 11s cubic-bezier(0.39, 0.575, 0.565, 1);
-}
+
 .box:focus {
 	transform: scale(0.9);
 }
@@ -259,6 +260,7 @@ main {
 	color: #fff;
 	border-radius: 1rem;
 	border: none;
+	animation: slide-up 12s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 #new-btn {
@@ -280,6 +282,18 @@ main {
 	width: 45vmin;
 	background-color: rgba(0, 0, 0, 0.6);
 	border-radius: 30px;
+	animation: slide-up 10s ease-in;
+}
+@keyframes slide-up {
+	70% {
+		transform: translateY(-150px);
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+	}
 }
 .scoreO,
 .scoreX {

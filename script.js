@@ -9,7 +9,7 @@ const front = document.querySelector(".front-page");
 
 setTimeout(() => {
 	front.style.display = "none";
-}, 8000);
+}, 7700);
 
 let playerOScore = 0;
 let playerXScore = 0;
